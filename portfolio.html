@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Afifa Tarafder | Data Scientist & AIML Engineer</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #F7F3C6;
+      color: #0A0A4A;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 8%;
+    }
+
+    .logo {
+      font-weight: 600;
+      font-size: 18px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 32px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #0A0A4A;
+      font-weight: 500;
+    }
+    .nav-links a:hover {
+    color: #1717A2;
+    }
+
+    /* Hero */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 8%;
+      min-height: 80vh;
+    }
+
+    .hero-text {
+      max-width: 520px;
+    }
+
+    .intro {
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+
+    .hero-text h1 {
+      font-size: 64px;
+      font-weight: 800;
+      line-height: 1.1;
+    }
+
+    .hero-text span {
+      font-weight: 600;
+    }
+
+    .location {
+      margin: 22px 0;
+      font-size: 18px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 30px;
+      background-color: #1717A2;
+      color: #FFFFFF;
+      text-decoration: none;
+      font-weight: 500;
+      border-radius: 6px;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+
+    /* Image */
+    .hero-image img {
+      width: 320px;
+      height: 320px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 6px solid rgba(10,10,74,0.1);
+    }
+    /* About Section */
+.about {
+  padding: 80px 8%;
+  background-color: #F7F3C6;
+  color: #0A0A4A;
+}
+
+.about-container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.nav-links i {
+  margin-right: 6px;
+  font-size: 14px;
+}
+
+.about h2 i {
+  margin-right: 10px;
+  color: #0a0a4e;
+}
+
+
+.about-intro {
+  font-size: 18px;
+  max-width: 720px;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.about-card {
+  padding: 30px;
+  border-radius: 10px;
+  background-color: #f0e575;
+}
+
+.about-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.about-card p {
+  font-size: 16px;
+  color: #1f0202;
+}
+/* Education Section */
+.education {
+  padding: 80px 8%;
+  background-color: #F7F3C6;
+  color: #0A0A4A;
+}
+
+.education-container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.education h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.education h2 i {
+  margin-right: 10px;
+  color: #09094c;
+}
+
+.education-card {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.edu-left h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.institute {
+  font-size: 16px;
+  color: #333;
+}
+
+.edu-right {
+  text-align: right;
+}
+
+.year {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.location-edu {
+  font-size: 14px;
+  color: #555;
+}
+.education-card {
+  margin-bottom: 20px;
+}
+.projects-section {
+  padding: 80px 8%;
+  background-color: #F7F3C6;
+  color: #0A0A4A;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  align-items: stretch;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-left: 5px solid #1717a2;
+  padding: 26px 28px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.project-tech {
+  font-size: 13px;
+  color: #4a4abf;
+  margin-top: auto; /* 🔑 pushes buttons down */
+  margin-bottom: 14px;
+}
+
+.project-links {
+  margin-top: 10px;
+}
+
+.project-links a {
+  display: inline-block;
+  padding: 9px 18px;
+  background-color: #1717a2;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.project-links a:hover {
+  background-color: #0f0f7a;
+  transform: scale(1.03);
+}
+
+.disabled-btn {
+  background-color: #9aa0a6;
+  cursor: not-allowed;
+}
+
+
+/* Internships Section */
+.internships {
+  padding: 80px 8%;
+  background-color: #F7F3C6;
+  color: #0A0A4A;
+}
+
+.internships-container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.internships h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.internships h2 i {
+  margin-right: 10px;
+  color: #09094c;
+}
+
+.internship-card {
+  background-color: #ffffff;
+  padding: 28px 30px;
+  border-radius: 12px;
+  border-left: 5px solid #1717A2;
+  margin-bottom: 24px;
+}
+
+.internship-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.internship-role {
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.internship-desc {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.internship-duration {
+  font-size: 14px;
+  color: #555;
+  margin-top: 8px;
+}
+.offer-btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #070772;;
+  border: 1px solid #1717A2;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.offer-btn:hover {
+  background-color: #070772;
+  color: #f6f6f6;
+}
+/* Certificates Section */
+.certificates {
+  padding: 80px 8%;
+  background-color: #F7F3C6;
+  color: #0A0A4A;
+}
+
+.certificates-container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.certificates h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.certificates h2 i {
+  margin-right: 10px;
+  color: #09094c;
+}
+
+.certificate-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.certificate-item {
+  background-color: #ffffff;
+  padding: 20px 24px;
+  border-radius: 10px;
+  border-left: 4px solid #11117f;
+}
+
+.certificate-item h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.certificate-org {
+  font-size: 14px;
+  color: #1f1818;
+}
+
+.certificate-year {
+  font-size: 13px;
+  color: #140c0c;
+  margin-top: 6px;
+}
+.cert-link {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #11117f;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cert-link:hover {
+  background-color: #09094c;
+  transform: translateY(-2px);
+}
+
+/* Skills Section */
+.skills {
+  padding: 80px 8%;
+  background-color: #F7F3C6;
+  color: #0A0A4A;
+}
+
+.skills-container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.skills h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.skills h2 i {
+  margin-right: 10px;
+  color: #09094c;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.skill-card {
+  background-color: #ffffff;
+  padding: 25px 28px;
+  border-radius: 12px;
+  border-left: 4px solid #1717A2;
+}
+
+.skill-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.skill-card ul {
+  list-style: none;
+}
+
+.skill-card ul li {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #333;
+}
+/* Review Section */
+.reviews {
+  padding: 80px 8%;
+  background-color: #F7F3C6;
+  color: #0A0A4A;
+}
+
+.reviews-container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.reviews h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.reviews h2 i {
+  margin-right: 10px;
+  color: #09094c;
+}
+
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.review-card {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  border-left: 4px solid #1717A2;
+}
+
+.review-text {
+  font-size: 15px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.review-author {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.review-role {
+  font-size: 13px;
+  color: #555;
+}
+/* Contact Section */
+.contact {
+  padding: 60px 8%;
+  background-color: #010130;
+  color:#ffffff;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.social-links {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.social-links a {
+  color: #ffffff;
+  font-size: 22px;
+  transition: transform 0.2s;
+}
+
+.social-links a:hover {
+  transform: scale(1.2);
+}
+</style>
+</head>
+
+<body>
+
+<nav class="navbar">
+  <div class="logo">Afifa Tarafder</div>
+  <ul class="nav-links">
+    <li><a href="#home"><i class="fa-solid fa-house"></i>Home  </a></li>
+    <li><a href="#about"><i class="fa-solid fa-user"></i> About </a></li>
+    <li><a href="#education"><i class="fa-solid fa-graduation-cap"></i>Education</a></li>
+    <li><a href="#projects"><i class="fa-solid fa-folder-open"></i>Project</a></li>
+    <li><a href="#internships"><i class="fa-solid fa-briefcase"></i>Internship</a></li>
+    <li><a href="#certificates"><i class="fa-solid fa-certificate"></i>Certificate</a></li>
+    <li><a href="#skill"><i class="fa-solid fa-brain"></i>Skill</a></li>
+    <li><a href="#reviews"><i class="fa-solid fa-comments"></i>review</a></li>
+
+  </ul>
+</nav>
+
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <p class="intro">Hello, I’m Afifa,</p>
+      <h1>Aspiring Data Scientist<br><span>& AIML Engineer</span></h1><br>
+      <p class="summary">
+    Aspiring Data Scientist and AIML engineer with a strong foundation in Python,
+    statistics, machine learning, and data analysis. Currently improving hands-on
+    skills through practical learning and real-world datasets. Completed academic
+    training and internships focused on data-driven problem solving. Actively
+    seeking entry-level Data Science or AIML opportunities where I can learn,
+    grow, and contribute effectively.
+    </p>
+<br>
+      <a href="Afifa_Tarafder_Resume.pdf" class="btn" download>Download Resume</a>
+
+    </div>
+
+    <div class="hero-image">
+      <img src="Afi.jpg" alt="Afifa Tarafder">
+    </div>
+  </section>
+<section class="about" id="about">
+  <div class="about-container">
+  <h2><i class="fa-solid fa-user"></i> About Me</h2>
+
+    <p class="about-intro">
+      I am a Data Science and AIML professional with a strong focus on building
+      structured, reliable, and business-oriented solutions. I approach problems
+      with analytical thinking and a clear understanding of real-world requirements.
+    </p>
+
+    <div class="about-grid">
+      <div class="about-card">
+        <h3>Professional Focus</h3>
+        <p>
+          I specialize in data analysis, machine learning fundamentals, and
+          transforming raw data into meaningful insights that support
+          decision-making.
+        </p>
+      </div>
+
+      <div class="about-card">
+        <h3>Work Approach</h3>
+        <p>
+          I value clean code, logical structure, and consistency. My work style
+          emphasizes clarity, maintainability, and alignment with organizational
+          goals.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="education" id="education">
+  <div class="education-container">
+    <h2><i class="fa-solid fa-graduation-cap"></i> Education</h2>
+
+    <div class="education-card">
+      <div class="edu-left">
+        <h3>B.Tech in Computer Science (AIML)</h3>
+        <p class="institute">Adamas University</p>
+        <p class="marks">CGPA: 7.55</p>
+      </div>
+
+      <div class="edu-right">
+        <span class="year">2021 – 2025</span>
+        <span class="location-edu">India</span>
+
+      </div>
+    </div>
+
+    <div class="education-card">
+      <div class="edu-left">
+        <h3>Higher Secondary</h3>
+        <p class="institute">Suria Moulana Azad High School</p>
+        <p class="marks">Final Score: 75%</p>
+      </div>
+
+      <div class="edu-right">
+        <span class="year">2021</span>
+        <span class="location-edu">India</span>
+      </div>
+    </div>
+
+        <div class="education-card">
+      <div class="edu-left">
+        <h3>Matriculation</h3>
+        <p class="institute">Kolsur Balika Vidyalaya</p>
+        <p class="marks">Final Score: 67%</p>
+      </div>
+
+      <div class="edu-right">
+        <span class="year">2019</span>
+        <span class="location-edu">India</span>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="projects" class="projects-section">
+  <h2><i class="fa-solid fa-folder-open"></i> Projects</h2>
+
+  <div class="projects-container">
+
+    <!-- Project 1 -->
+    <div class="project-card">
+      <h3>Employee Recruitment Prediction</h3>
+      <p class="project-desc">
+        Developed a machine learning model to predict candidate selection outcomes
+        based on recruitment data, supporting data-driven hiring decisions.
+      </p>
+
+      <ul class="project-points">
+        <li>Performed data preprocessing and feature engineering</li>
+        <li>Trained and evaluated classification models</li>
+        <li>Improved recruitment efficiency using predictive analytics</li>
+      </ul><br>
+
+        <div class="project-links">
+        <a href="https://github.com/afifa134/employee-recruitment-prediction" target="_blank">GitHub Repo</a>
+      </div>
+      </div>
+    <!-- Project 2 -->
+    <div class="project-card">
+      <h3>Heart Disease Prediction System</h3>
+      <p class="project-desc">
+        Built a predictive system to identify heart disease risks using medical
+        data, enabling early detection and preventive decision-making.
+      </p>
+
+      <ul class="project-points">
+        <li>Analyzed and cleaned healthcare datasets</li>
+        <li>Implemented machine learning classification algorithms</li>
+        <li>Evaluated models using accuracy and performance metrics</li>
+      </ul>
+
+      <p class="project-tech">
+        <strong>Technologies:</strong> Python, Scikit-learn, Matplotlib, Seaborn
+      </p>
+                  <div class="project-links">
+        <a href="" target="_blank">
+          GitHub Repo
+        </a>
+      </div>
+    </div>
+    <!-- Project 3 -->
+    <div class="project-card">
+      <h3>Budget Buddy – Personal Finance Tracker</h3>
+      <p class="project-desc">
+        Designed and developed a responsive web application to track personal
+        expenses and manage budgets efficiently.
+      </p>
+
+      <ul class="project-points">
+        <li>Built interactive UI using HTML, CSS, and JavaScript</li>
+        <li>Implemented dynamic expense tracking logic</li>
+        <li>Improved usability with clean and responsive design</li>
+      </ul>
+
+      <p class="project-tech">
+        <strong>Technologies:</strong> HTML, CSS, JavaScript
+      </p> 
+            <div class="project-links">
+        <a href="https://github.com/afifa134/Expense-Tracker-Web-Appication" target="_blank">
+          GitHub Repo
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="internships" id="internships">
+  <div class="internships-container">
+
+    <h2><i class="fa-solid fa-briefcase"></i> Internships</h2>
+
+    <!-- Internship 1 -->
+    <div class="internship-card">
+      <h3>Web Development Intern</h3>
+      <p class="internship-role">Vraio</p>
+      <p class="internship-desc">
+        Worked on building and styling responsive web pages using HTML, CSS,
+        and JavaScript. Assisted in improving UI structure and implementing
+        basic interactive components.
+      </p>
+      <p class="internship-duration">
+        Role Type: Internship
+      </p>
+      <a href="vraio-offer-letter.pdf"
+     target="_blank"
+     class="offer-btn">
+     View Offer Letter
+  </a>
+    </div>
+
+    <!-- Internship 2 -->
+    <div class="internship-card">
+      <h3>Web Development Intern</h3>
+      <p class="internship-role">Next 24Tech</p>
+      <p class="internship-desc">
+        Contributed to front-end development tasks including layout design,
+        responsive styling, and basic client-side scripting following
+        project requirements.
+      </p>
+      <p class="internship-duration">
+        Role Type: Internship
+      </p>
+      <a href="Next24.pdf"
+     target="_blank"
+     class="offer-btn">
+     Completation Letter
+  </a>
+    </div>
+
+    <!-- Internship 3 -->
+    <div class="internship-card">
+      <h3>Data Analyst Intern</h3>
+      <p class="internship-role">Embrizon Technology</p>
+      <p class="internship-desc">
+        Worked on data cleaning, analysis, and visualization to extract
+        meaningful insights from datasets. Supported analytical reporting
+        using Python and data analysis libraries.
+      </p>
+      <p class="internship-duration">
+        Role Type: Internship
+      </p>
+        <a href="em.pdf"
+     target="_blank"
+     class="offer-btn">
+    Completation Letter
+  </a>
+    </div>
+
+  </div>
+</section>
+<section class="certificates" id="certificates">
+  <div class="certificates-container">
+
+    <h2><i class="fa-solid fa-certificate"></i> Certifications</h2>
+
+    <div class="certificate-list">
+
+  <div class="certificate-item">
+  <h3>Certificate in Data Science</h3>
+  <p class="certificate-org">Boston Institute of Analytics</p>
+  <p class="certificate-year">Professional Certification</p>
+  <a href="BIA DS.pdf" target="_blank" class="cert-link">
+    View Certificate
+  </a>
+</div>
+
+<div class="certificate-item">
+  <h3>Certificate in Artificial Intelligence</h3>
+  <p class="certificate-org">Boston Institute of Analytics</p>
+  <p class="certificate-year">Professional Certification</p>
+  <a href="BIA AIML.pdf" target="_blank" class="cert-link">
+    View Certificate
+  </a>
+</div>
+
+      <div class="certificate-item">
+        <h3>Internet of Things (IoT)</h3>
+        <p class="certificate-org">NPTEL</p>
+        <p class="certificate-year">Score: 73%</p>
+        <a href="NPTLE.pdf" target="_blank" class="cert-link">
+          View Certificate
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="skills" id="skill">
+  <div class="skills-container">
+
+    <h2><i class="fa-solid fa-brain"></i> Skills</h2>
+
+    <div class="skills-grid">
+
+      <!-- Technical Skills -->
+      <div class="skill-card">
+        <h3>Technical Skills</h3>
+        <ul>
+          <li><strong>Programming:</strong> Python, C</li>
+          <li><strong>Data Handling & Analysis:</strong> SQL, Python (NumPy, Pandas – foundational)</li>
+          <li><strong>Data Visualization:</strong> Power BI, Tableau</li>
+          <li><strong>Productivity Tools:</strong> MS Excel, MS PowerPoint, MS Word</li>
+          <li><strong>Data Science:</strong> Data analysis, basic ML concepts, continuous practice</li>
+      </div>
+
+      <!-- Soft Skills -->
+      <div class="skill-card">
+        <h3>Soft Skills</h3>
+        <ul>
+          <li>Analytical Thinking & Problem Solving</li>
+          <li>Team Collaboration</li>
+          <li>Adaptability & Multitasking</li>
+          <li>Troubleshooting & Logical Reasoning</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="reviews" id="reviews">
+  <div class="reviews-container">
+
+    <h2><i class="fa-solid fa-comments"></i> Reviews</h2>
+
+    <div class="review-grid">
+
+      <div class="review-card">
+        <p class="review-text">
+          Afifa demonstrated strong analytical thinking and dedication during her work.
+          She consistently delivered structured and well-documented solutions.
+        </p>
+        <p class="review-author">Mentor</p>
+        <p class="review-role">Data Science Trainer</p>
+      </div>
+
+      <div class="review-card">
+        <p class="review-text">
+          She showed excellent learning ability and professionalism while working on
+          real-world datasets and web-based projects.
+        </p>
+        <p class="review-author">Internship Supervisor</p>
+        <p class="review-role">Technical Lead</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="contact" id="contact">
+  <h2>Connect with Me</h2>
+  <p>Open to opportunities, collaborations, and professional discussions.</p>
+  
+  <div class="social-links">
+    <a href="mailto:tarafder.afifa2004@gmail.com" title="Email">
+      <i class="fa-solid fa-envelope"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/afifa-tarafder-671bb7221/" target="_blank" title="LinkedIn">
+      <i class="fa-brands fa-linkedin"></i>
+    </a>
+    <a href="https://github.com/afifa134" target="_blank" title="GitHub">
+      <i class="fa-brands fa-github"></i>
+    </a>
+    <a href="https://www.instagram.com/afifatarafder/" target="_blank" title="Instagram">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+    <a href="https://www.facebook.com/afiarup" target="_blank" title="FaceBook">
+      <i class="fa-brands fa-facebook"></i>
+    </a>
+  </div>
+</section>
+</body>
+</html>
