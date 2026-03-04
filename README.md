@@ -18,4 +18,4 @@ To build a self interetive porfolio that help a person that what tpye of job can
 
 ---
 ## Link
-[https://6985f143e9b848d478931b16--tangerine-griffin-a1da3d.netlify.app/](https://portfolio-of-self.netlify.app/)
+(https://afifa134.github.io/Portfolio-of-self/)
